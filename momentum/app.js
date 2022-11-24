@@ -1,9 +1,42 @@
-const player = {
-    name: "nico",
-    sayHello: function(otherPersonsName){
-        console.log("Hello! " + otherPersonsName + " nict to meet you!");
-    }
-};
+const h1 = document.getElementById("title");
 
-console.log(player.name);
-player.sayHello("toby");
+
+
+function handleTitleClick(){
+    h1.style.color = "blue";
+}
+
+function handleMouseEnter(){
+    h1.innerText = "Mouse is here!";
+}
+
+function handleMouseLeave(){
+    h1.innerText = "Mouse is gone!";
+}
+
+function handleWindowResize(){
+    document.body.style.backgroundColor = "tomato";
+}
+
+function handelWindowCopy(){
+    alert("copier!");
+}
+
+function handleWindowOffline(){
+    alert("SOS no WIFI");
+}
+
+function handleWindowOnline(){
+    alert("ALL GOOD");
+}
+
+// h1.onclick = handleTitleClick;
+h1.addEventListener("click", handleTitleClick);
+// h1.onmouseenter = handleMouseEnter;
+h1.addEventListener("mouseenter", handleMouseEnter);
+h1.addEventListener("mouseleave", handleMouseLeave);
+
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handelWindowCopy);
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
