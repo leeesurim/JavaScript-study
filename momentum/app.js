@@ -1,9 +1,22 @@
-const h1 = document.getElementById("title");
+const body = document.getElementById("bg");
+var intViewportWidth = window.innerWidth;
 
-function handleTitleClick(){
-    h1.classList.toggle("clicked");
+function handleWindowResize(){
+    if(intViewportWidth >= 1200){
+        body.classList.remove("bg");
+        body.classList.remove("minus");
+        body.classList.add("plus");
+    }else if(intViewportWidth < 1200 && intViewportWidth >=800){
+        body.classList.remove("plus");
+        body.classList.remove("minus");
+        body.classList.add("bg");
+        
+    }else if(intViewportWidth < 800 && intViewportWidth >= 400){
+        body.classList.remove("plus");
+        body.classList.remove("bg");
+        body.classList.add("minus");
+    }
+
 }
 
-// classList - class들의 목록으로 작업할 수 있게 허용
-// className - 이전 class들은 상관하지 않고 모든 걸 교체
-h1.addEventListener("click", handleTitleClick);
+window.addEventListener("resize", handleWindowResize);

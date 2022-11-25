@@ -1,6 +1,6 @@
-body {
+/* body{
     background-color: beige;
-}
+} */
 
 h1 {
     color: cornflowerblue;
@@ -13,4 +13,16 @@ h1 {
 
 .sexy-font {
     font-family: 'Courier New', Courier, monospace;
+}
+
+.bg {
+    background-color: plum;
+}
+
+.plus{
+    background-color: yellow;
+}
+
+.minus{
+    background-color: cornflowerblue;
 }
