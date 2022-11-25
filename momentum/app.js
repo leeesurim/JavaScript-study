@@ -1,42 +1,9 @@
 const h1 = document.getElementById("title");
 
-
-
 function handleTitleClick(){
-    h1.style.color = "blue";
+    h1.classList.toggle("clicked");
 }
 
-function handleMouseEnter(){
-    h1.innerText = "Mouse is here!";
-}
-
-function handleMouseLeave(){
-    h1.innerText = "Mouse is gone!";
-}
-
-function handleWindowResize(){
-    document.body.style.backgroundColor = "tomato";
-}
-
-function handelWindowCopy(){
-    alert("copier!");
-}
-
-function handleWindowOffline(){
-    alert("SOS no WIFI");
-}
-
-function handleWindowOnline(){
-    alert("ALL GOOD");
-}
-
-// h1.onclick = handleTitleClick;
+// classList - class들의 목록으로 작업할 수 있게 허용
+// className - 이전 class들은 상관하지 않고 모든 걸 교체
 h1.addEventListener("click", handleTitleClick);
-// h1.onmouseenter = handleMouseEnter;
-h1.addEventListener("mouseenter", handleMouseEnter);
-h1.addEventListener("mouseleave", handleMouseLeave);
-
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handelWindowCopy);
-window.addEventListener("offline", handleWindowOffline);
-window.addEventListener("online", handleWindowOnline);
