@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+        .bold{
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <form id="casino-form">
+        <h1>Random Number Game</h1>
+        <span class="bold">Generate a number between 0 and </span>
+        <input type="number" class="setInput" required> <br>
+        <span>Guess the number: </span>
+        <input type="number" class="guessInput" required>
+        <button>Play!</button>
+    </form>
+    <div id="chose" class="hidden">You chose: <span></span>, the machine chose: <span></span></div>
+    <div id="result" class="hidden bold"></div>
+    <script src="index.js"></script>
+</body>
+</html>
