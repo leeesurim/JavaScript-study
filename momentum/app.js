@@ -1,22 +1,19 @@
-const body = document.body;
-const BIG_SCREEN = "bigScreen";
-const MEDIUM_SCREEN = "mediumScreen";
-const SMALL_SCREEN = "smallScreen";
-const width = window.innerWidth;
-document.querySelectorAll
+// const loginForm = document.getElementById("login-form");
+// const loginInput = loginForm.querySelector("input");
+// const loginButton = loginForm.querySelector("button");
 
-function handleWindowResize(){
-    if(width >= 1000){
-        body.classList.add(BIG_SCREEN);
-        body.classList.remove(MEDIUM_SCREEN);
-    }else if(width <= 1140 && width >=700){
-        body.classList.add(MEDIUM_SCREEN);
-        body.classList.remove(BIG_SCREEN);
-    }else {
-        body.classList.remove(MEDIUM_SCREEN);
-        body.classList.add(SMALL_SCREEN);
-    }
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+// const loginButton = document.querySelector("#login-form button");
+
+function onLoginSubmit(){
+    const username = loginInput.value;
+    // if(username === ""){
+    //     alert("Please write your name");
+    // }else if(username.length > 15){
+    //     alert("Your name is too long.");
+    // }
+    console.log(username);
 
 }
-
-window.addEventListener("resize", handleWindowResize);
+loginForm.addEventListener("submit", onLoginSubmit);
