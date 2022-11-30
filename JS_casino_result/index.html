@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="select">
+        <h3 class="js-title">
+            Generate a number between 0 and
+            <input type="number" min="0" />
+        </h3>
+        <!-- <input>태그의 min을 사용하여 최솟값 지정 -->
+    </div>
+    <!-- <button>태그를 클릭해 <input>태그의 내용을 submit(제출)하기 위해서는 <form>태그 내에 작성해야 합니다. -->
+    <div id="guess">
+        <label>Guess the number:</label>
+        <input type="number" min="0" />
+        <button>Play!</button>
+    </div>
+    <div id="js-result">
+        <!-- resultMessage -->
+        <span></span> 
+        <br />
+        <!-- score -->
+        <span></span>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
