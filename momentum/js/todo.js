@@ -12,8 +12,10 @@ function saveToDos(){
 
 function deleteToDO(event){
     const li = event.target.parentElement;
-    console.log(li.id)
     li.remove();
+    // console.log(typeof(li.id)); // li.id - string, toDo.id - number
+    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
+    saveToDos(); // save 한번 더 필요
 }
 
 function paintToDo(newTodo){
@@ -51,5 +53,8 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 if(savedToDos){
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
+    // forEach 함수는 이 paintToDo를 parsedToDos 배열의 요소마다 실행
     parsedToDos.forEach(paintToDo);
 }
+
+ 
