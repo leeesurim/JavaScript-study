@@ -14,21 +14,40 @@ body{
     */
 
     display: flex;
-    /* 메인축을 지정하는 속성 */
+    /* 중심축(수평 또는 수직)을 지정하는 속성 */
     flex-direction: row; 
     /* flex-direction: row-reverse; */
     /* flex-direction: column; */
     /* flex-direction: column-reverse; */
     
-    /* flex item 줄바꿈 설정 */
+    /* item이 가득차면 한 줄에 넘어가게 할건지 설정*/
     flex-wrap: nowrap;
     /* flex-wrap: wrap; */
     /* flex-wrap: wrap-reverse; */
+
+    /* flex-flow = flex-direction + flex-wrap */
+    /* flex-flow: column nowrap; */
+
+    /* 중심축에서 item 배치 */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+
+    /* 반대축에서 item 배치 */
+    /* align-items: center; */
+    align-items: baseline;
+
+    /* 반대축에서 item 지정 */
+    align-content: space-between;
 }
 
 .item {
     width: 40px;
     height: 40px;
+    border: 1px solid black;
     
 }
 
